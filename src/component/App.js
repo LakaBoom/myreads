@@ -60,6 +60,8 @@ class App extends React.Component {
           [shelf]: prevState[shelf].concat(book)
         }))
       }
+
+      // configure notification message
       var changeShelfName = {
         'currentlyReading' : 'Currently Reading',
         'wantToRead' : 'Want To Read',
@@ -68,7 +70,7 @@ class App extends React.Component {
         'none': 'Repository'
       }
       if(changeShelfName[shelf] === 'Repository'){
-        NotificationManager.warning(`Deleted ${book.title} from shelf ${changeShelfName[prevShelf]}`,'Deleted','3000')
+        NotificationManager.warning(`Deleted ${book.title} from ${changeShelfName[prevShelf]}`,'Deleted','3000')
       }else if(changeShelfName[prevShelf] === 'Repository'){
         NotificationManager.success(`Added ${book.title} to ${changeShelfName[shelf]}`,'Added','3000')
       }else{

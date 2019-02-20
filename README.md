@@ -1,4 +1,29 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installment
+
+  Used `react-router-dom` and  `react-notifications`.
+
+  `npm install --save-dev react-router-dom react-notifications`
+
+## Task List
+
+#### Main Page
+    [x] Show three categories for books(currently reading, wang to read, and read).
+    [x] Allow users to move books between shelves.
+    [x] The information persist between page refreshes.
+
+#### Search page
+    [x] Have search input for users to search for books.
+    [x] Search results allow a user to categorize a book as “currently reading”, “want to read”, or “read”.
+    [x] Selections made on the search page show up on the main page.
+
+#### Routing
+    [x] The main page link to the search page.
+    [x] The search page link back to the main. page.
+
+#### Code Functionality
+    [x] The project code handle state management appropriately.
+    [x] The code run without errors.
 
 ## Available Scripts
 
@@ -36,33 +61,3 @@ If you aren’t satisfied with the build tool and configuration choices, you can
 Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

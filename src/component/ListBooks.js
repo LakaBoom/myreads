@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import ShelfChange from './ShelfChange'
 import {Link} from 'react-router-dom'
+import OneBook from './OneBook'
 
 class ListBooks extends Component{
 
@@ -34,18 +35,11 @@ class ListBooks extends Component{
                     )}
                     {shelf.booksInside.map(book=>(
                       <li key= {book.id}>
-                        <div className="book">
-                          <div className="book-top">
-                            <div className="book-cover" style={{backgroundImage: `url(${book.imageLinks.smallThumbnail})`}}></div>
-                            <ShelfChange
-                              updateShelf= {updateShelf}
-                              bookObj = {book}
-                              books = {books}
-                              />
-                          </div>
-                          <div className="book-title">{book.title}</div>
-                          <div className="book-authors">{book.authors[0]}</div>
-                        </div>
+                        <OneBook
+                          updateShelf = {updateShelf}
+                          book = {book}
+                          books = {books}
+                          />
                       </li>
                     ))}
                   </ol>

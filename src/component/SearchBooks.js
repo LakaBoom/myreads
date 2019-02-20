@@ -1,8 +1,7 @@
 import React, {Component} from 'react'
 import {Link} from 'react-router-dom'
-import ShelfChange from './ShelfChange'
 import * as BooksAPI from './BooksAPI'
-import noCover from '../img/no-cover-img.png'
+import OneBook from './OneBook'
 
 class SearchBooks extends Component{
   state = {
@@ -62,18 +61,11 @@ class SearchBooks extends Component{
               {(showingBooks.length >0) &&(
                 showingBooks.map(book=>(
                   <li key= {book.id}>
-                    <div className="book">
-                      <div className="book-top">
-                          <div className="book-cover" style={{backgroundImage: `url(${(book.imageLinks && book.imageLinks.smallThumbnail)? book.imageLinks.smallThumbnail:noCover})`}}></div>
-                        <ShelfChange
-                          updateShelf = {updateShelf}
-                          bookObj = {book}
-                          books = {books}
-                          />
-                      </div>
-                      <div className="book-title">{book.title? book.title : 'No title available'}</div>
-                      <div className="book-authors">{book.authors? book.authors[0]:'No author available'}</div>
-                    </div>
+                    <OneBook
+                      updateShelf = {updateShelf}
+                      book = {book}
+                      books = {books}
+                      />
                   </li>
                 )))
               }

@@ -5,6 +5,7 @@
   "dependencies": {
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
+    "react-notifications": "^1.4.3",
     "react-scripts": "2.1.5",
     "react-transition-group": "^2.5.3"
   },

@@ -1,9 +1,11 @@
 import React from 'react'
 import '../css/App.css'
+import 'react-notifications/lib/notifications.css'
 import ListBooks from './ListBooks'
 import SearchBooks from './SearchBooks'
 import * as BooksAPI from './BooksAPI'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
+import {NotificationContainer, NotificationManager} from 'react-notifications'
 
 class App extends React.Component {
 
@@ -46,7 +48,6 @@ class App extends React.Component {
         }
       })
     }
-    console.log('changed shelf from '+prevShelf +' to ' + shelf )
     book.shelf = shelf
     BooksAPI.update(book,shelf).then(()=>{
       if(prevShelf){
@@ -59,13 +60,29 @@ class App extends React.Component {
           [shelf]: prevState[shelf].concat(book)
         }))
       }
+      var changeShelfName = {
+        'currentlyReading' : 'Currently Reading',
+        'wantToRead' : 'Want To Read',
+        'read': 'Read',
+        'undefined': 'Repository',
+        'none': 'Repository'
+      }
+      if(changeShelfName[shelf] === 'Repository'){
+        NotificationManager.warning(`Deleted ${book.title} from shelf ${changeShelfName[prevShelf]}`,'Deleted','3000')
+      }else if(changeShelfName[prevShelf] === 'Repository'){
+        NotificationManager.success(`Added ${book.title} to ${changeShelfName[shelf]}`,'Added','3000')
+      }else{
+        NotificationManager.info(`Moved ${book.title} from ${changeShelfName[prevShelf]} to ${changeShelfName[shelf]}`,'Shelf Change','3000')
+      }
     })
   }
+
 
   render() {
     return (
       <Router>
         <div className="app">
+          <NotificationContainer/>
 
           <Route exact path ='/' render = {()=>(
               <ListBooks

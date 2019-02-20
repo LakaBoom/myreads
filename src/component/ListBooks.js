@@ -29,6 +29,9 @@ class ListBooks extends Component{
                 <h2 className="bookshelf-title">{shelf.name}</h2>
                 <div className="bookshelf-books">
                   <ol className="books-grid">
+                    {(shelf.booksInside.length ===0)&&(
+                      <div> No books in {shelf.name} </div>
+                    )}
                     {shelf.booksInside.map(book=>(
                       <li key= {book.id}>
                         <div className="book">

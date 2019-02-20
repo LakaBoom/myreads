@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import ShelfChange from './ShelfChange'
 import {Link} from 'react-router-dom'
 import OneBook from './OneBook'
 

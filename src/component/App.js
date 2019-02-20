@@ -70,11 +70,11 @@ class App extends React.Component {
         'none': 'Repository'
       }
       if(changeShelfName[shelf] === 'Repository'){
-        NotificationManager.warning(`Deleted ${book.title} from ${changeShelfName[prevShelf]}`,'Deleted','3000')
+        NotificationManager.warning(`Deleted ${book.title} from ${changeShelfName[prevShelf]}`,'Deleted')
       }else if(changeShelfName[prevShelf] === 'Repository'){
-        NotificationManager.success(`Added ${book.title} to ${changeShelfName[shelf]}`,'Added','3000')
+        NotificationManager.success(`Added ${book.title} to ${changeShelfName[shelf]}`,'Added')
       }else{
-        NotificationManager.info(`Moved ${book.title} from ${changeShelfName[prevShelf]} to ${changeShelfName[shelf]}`,'Shelf Change','3000')
+        NotificationManager.info(`Moved ${book.title} from ${changeShelfName[prevShelf]} to ${changeShelfName[shelf]}`,'Shelf Change')
       }
     })
   }

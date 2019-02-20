@@ -1,48 +1,20 @@
 import React, { Component } from 'react'
-import * as BooksAPI from './BooksAPI'
 import ShelfChange from './ShelfChange'
 import {Link} from 'react-router-dom'
 
 class ListBooks extends Component{
-  state = {
-     currentlyReading:[],
-     wantToRead:[],
-     read: [],
-  }
-
-  updateState=()=>{
-    BooksAPI.getAll().then(books =>{
-      this.setState({
-        currentlyReading:books.filter(book=> book.shelf ==='currentlyReading'),
-        wantToRead:books.filter(book=> book.shelf ==='wantToRead'),
-        read:books.filter(book=> book.shelf ==='read'),
-      })
-    })
-  }
-
-  componentDidMount(){
-    this.updateState()
-  }
-
-  updateShelf =(book,shelf)=>{
-    BooksAPI.update(book,shelf).then(()=>{
-      this.updateState()
-      this.forceUpdate()
-    })
-  }
-
 
   render(){
     //object destructuring
-    const {currentlyReading, wantToRead, read} = this.state
+    const {updateShelf,books} = this.props
 
     const shelves= [
       {name:'Currently Reading',
-       booksInside: currentlyReading},
+       booksInside:books.currentlyReading},
       {name:'Want to Read',
-      booksInside: wantToRead},
+      booksInside: books.wantToRead},
       {name:'Read',
-      booksInside: read}
+      booksInside:books.read}
     ]
 
     return(
@@ -58,13 +30,14 @@ class ListBooks extends Component{
                 <div className="bookshelf-books">
                   <ol className="books-grid">
                     {shelf.booksInside.map(book=>(
-                      <li key= {book.title}>
+                      <li key= {book.id}>
                         <div className="book">
                           <div className="book-top">
-                            <div className="book-cover" style={{width:128, height: 193, backgroundImage: `url(${book.imageLinks.smallThumbnail})`}}></div>
+                            <div className="book-cover" style={{backgroundImage: `url(${book.imageLinks.smallThumbnail})`}}></div>
                             <ShelfChange
-                              onUpdateShelf = {this.updateShelf}
+                              updateShelf= {updateShelf}
                               bookObj = {book}
+                              books = {books}
                               />
                           </div>
                           <div className="book-title">{book.title}</div>

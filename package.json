@@ -5,7 +5,8 @@
   "dependencies": {
     "react": "^16.8.2",
     "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "react-transition-group": "^2.5.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -23,6 +24,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "escape-string-regexp": "^1.0.5",
+    "jquery": "^3.3.1",
     "react-router-dom": "^4.3.1"
   }
 }

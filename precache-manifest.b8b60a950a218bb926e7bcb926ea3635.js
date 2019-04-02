@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "78c6f53b2342643639fe1cbaf171bf47",
-    "url": "/myreads/static/media/arrow-drop-down.78c6f53b.svg"
+    "revision": "bb9363b86b02777d23523851826414e0",
+    "url": "/myreads/static/media/add.bb9363b8.svg"
   },
   {
     "revision": "b790b34b679150d410e5",
@@ -28,16 +28,16 @@ self.__precacheManifest = [
     "url": "/myreads/static/js/main.b790b34b.chunk.js"
   },
   {
-    "revision": "bb9363b86b02777d23523851826414e0",
-    "url": "/myreads/static/media/add.bb9363b8.svg"
-  },
-  {
-    "revision": "c0d3c94cd6112550c51d7d1ed13b9da1",
-    "url": "/myreads/static/media/notification.c0d3c94c.eot"
+    "revision": "78c6f53b2342643639fe1cbaf171bf47",
+    "url": "/myreads/static/media/arrow-drop-down.78c6f53b.svg"
   },
   {
     "revision": "651771e1df95c807c99608188d0a4287",
     "url": "/myreads/static/media/notification.651771e1.woff"
+  },
+  {
+    "revision": "c0d3c94cd6112550c51d7d1ed13b9da1",
+    "url": "/myreads/static/media/notification.c0d3c94c.eot"
   },
   {
     "revision": "5bee74caefdf9d0a834915f6c8eeb259",

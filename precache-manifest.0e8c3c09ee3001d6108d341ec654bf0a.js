@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/myreads/static/media/add.bb9363b8.svg"
   },
   {
-    "revision": "c41740fd146e81822473",
+    "revision": "d2d9c54e4dce9190ca83",
     "url": "/myreads/static/css/main.4bf5eb08.chunk.css"
   },
   {
@@ -12,20 +12,20 @@ self.__precacheManifest = [
     "url": "/myreads/static/js/runtime~main.605358ee.js"
   },
   {
-    "revision": "5bee74caefdf9d0a834915f6c8eeb259",
-    "url": "/myreads/static/media/notification.5bee74ca.svg"
+    "revision": "0b4ac1dc75df35e169b70d7719afe4cc",
+    "url": "/myreads/static/media/notification.0b4ac1dc.ttf"
   },
   {
-    "revision": "24622a665132c967f624",
-    "url": "/myreads/static/js/2.24622a66.chunk.js"
+    "revision": "dca6f42603a310545d4c",
+    "url": "/myreads/static/js/2.dca6f426.chunk.js"
   },
   {
     "revision": "3687aa988bec28f17ae39153db1646c3",
     "url": "/myreads/static/media/arrow-back.3687aa98.svg"
   },
   {
-    "revision": "c41740fd146e81822473",
-    "url": "/myreads/static/js/main.c41740fd.chunk.js"
+    "revision": "d2d9c54e4dce9190ca83",
+    "url": "/myreads/static/js/main.d2d9c54e.chunk.js"
   },
   {
     "revision": "78c6f53b2342643639fe1cbaf171bf47",
@@ -40,15 +40,15 @@ self.__precacheManifest = [
     "url": "/myreads/static/media/notification.651771e1.woff"
   },
   {
-    "revision": "0b4ac1dc75df35e169b70d7719afe4cc",
-    "url": "/myreads/static/media/notification.0b4ac1dc.ttf"
+    "revision": "5bee74caefdf9d0a834915f6c8eeb259",
+    "url": "/myreads/static/media/notification.5bee74ca.svg"
   },
   {
-    "revision": "24622a665132c967f624",
+    "revision": "dca6f42603a310545d4c",
     "url": "/myreads/static/css/2.082e4c02.chunk.css"
   },
   {
-    "revision": "f2d5a2d816ec2f41c077b73023c3ec64",
+    "revision": "9da679b92de19816eaff6b6daeed55cc",
     "url": "/myreads/index.html"
   }
 ];

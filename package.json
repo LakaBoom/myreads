@@ -2,7 +2,7 @@
   "name": "myreads",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://lakaboom.github.io/myreads",
+  "homepage": "http://LakaBoom.github.io/myreads",
   "dependencies": {
     "react": "^16.8.2",
     "react-dom": "^16.8.2",

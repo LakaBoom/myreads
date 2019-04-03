@@ -1,3 +1,12 @@
+/**
+ * @Author: sharonlee
+ * @Date:   2019-02-15T16:00:58-08:00
+ * @Last modified by:   sharonlee
+ * @Last modified time: 2019-04-02T19:20:25-07:00
+ */
+
+
+
 import React from 'react'
 import '../css/App.css'
 import 'react-notifications/lib/notifications.css'
@@ -83,17 +92,19 @@ class App extends React.Component {
   render() {
     return (
       <Router>
-        <div className="app">
-          <NotificationContainer/>
 
-          <Route exact path ='/' render = {()=>(
-              <ListBooks
-                books = {this.state}
-                updateShelf = {this.updateShelf}/>
+        <div className="app">
+          // <NotificationContainer/>
+
+          <Route exact path ={process.env.PUBLIC_URL + '/'} render = {()=>(
+            <ListBooks
+              books = {this.state}
+              updateShelf = {this.updateShelf}/>
+
             )}
           />
 
-          <Route path = '/search' render = {()=>(
+        <Route path = {process.env.PUBLIC_URL + '/search'} render = {()=>(
                 <SearchBooks
                   books = {this.state}
                   updateShelf ={this.updateShelf}/>
@@ -101,8 +112,8 @@ class App extends React.Component {
           />
 
         </div>
-
       </Router>
+
     )
   }
 }

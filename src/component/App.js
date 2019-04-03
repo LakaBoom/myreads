@@ -2,7 +2,7 @@
  * @Author: sharonlee
  * @Date:   2019-02-15T16:00:58-08:00
  * @Last modified by:   sharonlee
- * @Last modified time: 2019-04-02T19:20:25-07:00
+ * @Last modified time: 2019-04-02T20:33:57-07:00
  */
 
 
@@ -13,7 +13,7 @@ import 'react-notifications/lib/notifications.css'
 import ListBooks from './ListBooks'
 import SearchBooks from './SearchBooks'
 import * as BooksAPI from './BooksAPI'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import {BrowserRouter, Route } from 'react-router-dom'
 import {NotificationContainer, NotificationManager} from 'react-notifications'
 
 class App extends React.Component {
@@ -90,13 +90,13 @@ class App extends React.Component {
 
 
   render() {
+
     return (
-      <Router>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
 
         <div className="app">
-          // <NotificationContainer/>
-
-          <Route exact path ={process.env.PUBLIC_URL + '/'} render = {()=>(
+          <NotificationContainer/>
+          <Route exact path ='/' render = {()=>(
             <ListBooks
               books = {this.state}
               updateShelf = {this.updateShelf}/>
@@ -104,7 +104,7 @@ class App extends React.Component {
             )}
           />
 
-        <Route path = {process.env.PUBLIC_URL + '/search'} render = {()=>(
+          <Route exact path = '/search' render = {()=>(
                 <SearchBooks
                   books = {this.state}
                   updateShelf ={this.updateShelf}/>
@@ -112,7 +112,7 @@ class App extends React.Component {
           />
 
         </div>
-      </Router>
+      </BrowserRouter>
 
     )
   }
